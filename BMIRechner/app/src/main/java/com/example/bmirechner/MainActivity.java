@@ -13,18 +13,57 @@ public class MainActivity extends AppCompatActivity {
 
     private Button los_button;
     private TextView ergebnis;
-    private EditText gewicht;
-    private EditText größe;
+    private TextView gewicht;
+    private TextView größe;
+    private SeekBar seekBar;
+    private SeekBar seekBar2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        gewicht = (EditText)findViewById(R.id.gewicht);
-        größe = (EditText)findViewById(R.id.groese);
+        gewicht = (TextView)findViewById(R.id.gewicht);
+        größe = (TextView) findViewById(R.id.groese);
         ergebnis = (TextView)findViewById((R.id.ergebnis));
+        los_button = (Button)findViewById(R.id.los_button);
+        seekBar = (SeekBar)findViewById(R.id.seekBar);
+        seekBar2 = (SeekBar)findViewById(R.id.seekBar2);
 
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                gewicht.setText("" + progress + "");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        seekBar2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                größe.setText("" + progress+ "");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
 
     }
 
@@ -43,6 +82,6 @@ public class MainActivity extends AppCompatActivity {
     private void displayBMI(float bmi) {
         String bmishow = "";
         bmishow = bmi +"";
-        ergebnis.setText(bmishow);
+        ergebnis.setText("Ihr BMI ist: " + bmishow);
     }
 }

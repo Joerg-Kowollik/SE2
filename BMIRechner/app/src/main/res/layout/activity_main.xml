@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
     android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
     tools:context=".MainActivity">
 
     <TextView
@@ -20,16 +20,25 @@
         android:text="@string/gewicht_in_kg"
         android:textSize="20sp" />
 
-    <EditText
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:gravity="center_horizontal"
+        android:max="150"
+        android:textSize="20sp" />
+
+    <TextView
         android:id="@+id/gewicht"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:ems="6"
-        android:inputType="numberDecimal"
-        android:textSize="20sp"
-        android:autofillHints="" />
+        android:autofillHints=""
+        android:text="0"
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,16 +49,25 @@
         android:text="@string/k_rpergr_e_in_cm"
         android:textSize="20sp" />
 
-    <EditText
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:gravity="center_horizontal"
+        android:max="225"
+        android:textSize="20sp" />
+
+    <TextView
         android:id="@+id/groese"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:ems="6"
-        android:inputType="numberDecimal"
-        android:textSize="20sp"
-        android:autofillHints="" />
+        android:autofillHints=""
+        android:text="0"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/los_button"
@@ -70,7 +88,6 @@
         android:gravity="center_horizontal"
         android:textSize="20sp"
         tools:ignore="InvalidId" />
-
 
 
 
