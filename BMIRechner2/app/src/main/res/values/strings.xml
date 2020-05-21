@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BMI Rechner</string>
+    <string name="hallo_du_fette_sau">Hallo du fette Sau</string>
+    <string name="k_rpergr_e_in_zentimetern">Körpergröße in Zentimetern</string>
+    <string name="los">Los</string>
+    <string name="bmi_rechner">BMI Rechner</string>
+    <string name="gewicht_in_kilogramm">Gewicht in Kilogramm</string>
+    <string name="sie_haben_einen_bmi_von">Sie haben einen BMI von:</string>
+    <string name="gewicht" />
+    <string name="größe" />
+    <string name="k_rpergr_e_in_cm">Körpergröße in cm</string>
+    <string name="gewicht_in_kg">Gewicht in kg</string>
+</resources>
