@@ -69,18 +69,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void calculateBMI(View view) {
 
-        String gewi = gewicht.getText().toString();
-        String grö = größe.getText().toString();
+        String bmishow = "";
 
-        float gew = Float.parseFloat (gewi);
-        float gro = Float.parseFloat (grö);
+        float gew = Float.parseFloat (gewicht.getText().toString());
+        float gro = Float.parseFloat (größe.getText().toString());
         float bmi = gew /((gro/100)* (gro/100));
 
-        displayBMI(bmi);
-    }
 
-    private void displayBMI(float bmi) {
-        String bmishow = "";
         bmishow = bmi +"";
         ergebnis.setText("Ihr BMI ist: " + bmishow);
     }
